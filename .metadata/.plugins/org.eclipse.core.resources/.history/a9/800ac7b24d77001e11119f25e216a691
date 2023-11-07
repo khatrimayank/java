@@ -1,0 +1,3 @@
+#logging.level.org.springframework=DEBUG
+management.endpoints.web.exposure.include=health,matrics
+spring.datasource.url=jdbc:h2:mem:a42be39c-92e1-4200-b97b-6b37ce736d21 user=SA

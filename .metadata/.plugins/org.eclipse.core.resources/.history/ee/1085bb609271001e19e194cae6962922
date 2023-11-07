@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import java.util.Arrays;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CourseController {
+	
+	@GetMapping("/Courses")
+	
+	public List<Courses> getAllCourses(){
+		
+		
+		return Arrays.asList(new Courses(1,"Learning MicroServices","Mayank"));
+		
+		
+	}
+
+}

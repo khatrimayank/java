@@ -1,0 +1,70 @@
+package com.basics.java;
+
+public class Student {
+	
+	public static void main(String[] args) {
+		
+		int[] marks= {98,99,90};
+		
+		Student student=new Student("Mayank",marks);
+		
+		student.getNumberOfMarks();
+		
+		student.getMaximunMark();
+		
+		student.getMinimumMark();
+		
+		student.getSumOfNumbers();
+	}
+	
+	private String name;
+	
+	private int[] listOfMarks;
+	
+	public Student (String name , int[] listOfMarks) {
+		
+		this.name=name;
+		this.listOfMarks=listOfMarks;
+	}
+	
+	public void getNumberOfMarks() {
+			
+		System.out.println(listOfMarks.length);
+			
+	}
+		
+	public void getMaximunMark() {
+		
+		int temp=listOfMarks[0];
+		
+		for (int i=1;i<listOfMarks.length;i++) {
+			if (listOfMarks[i]>temp) {
+				temp=listOfMarks[i];
+			}
+		}
+		System.out.println(temp);
+	}
+		
+    public void getMinimumMark() {
+		
+        int temp=listOfMarks[0];
+		
+		for (int i=1;i<listOfMarks.length;i++) {
+			if (listOfMarks[i]<temp) {
+				temp=listOfMarks[i];
+			}
+		}
+		System.out.println(temp);
+	}
+
+    public void getSumOfNumbers() {
+		
+    	int sum=0;
+		for(int mark:listOfMarks) {
+			sum+=mark;
+		}
+		
+		System.out.println(sum);
+	}
+
+}

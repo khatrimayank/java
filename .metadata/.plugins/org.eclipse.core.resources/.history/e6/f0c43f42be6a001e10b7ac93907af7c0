@@ -1,0 +1,38 @@
+package com.example.learningSpringFrameWork;
+
+import org.springframework.context.annotation.Bean;
+
+import org.springframework.context.annotation.Configuration;
+
+record Address(String firstLine , String City) { 
+	
+} ;
+
+@Configuration
+
+public class HelloWorldConfiguration {
+
+	@Bean
+	
+	public String name() {
+		
+		return "MAyank";
+		
+	}
+	
+	@Bean
+	
+	public Address address() {
+		
+		Address address = new Address("Lakhara Chowk","Nokha");
+
+
+		//var address = new Address("Lakhara Chowk","Nokha");
+
+		
+		return address;
+				
+		//return new Address("Lakhara Chowk","Nokha");
+	}
+
+}

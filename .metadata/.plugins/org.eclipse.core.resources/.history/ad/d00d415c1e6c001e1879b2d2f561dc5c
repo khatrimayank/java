@@ -1,0 +1,27 @@
+package com.example.learningSpringFrameWork;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+
+public class GamingConfiguration {
+    
+	@Bean
+	
+	public GamingConsole game() {
+		
+		var gam = new MarioGame();
+		
+		return gam;
+		
+	}
+	
+	@Bean
+	
+	public GameRunner gamerunner(GamingConsole gam) {
+		var gamerunner=new GameRunner(gam);
+		return gamerunner;
+	}
+  
+}
